@@ -63,7 +63,7 @@ app.get('/auth/callback', async (req, res) => {
     
     // Encode token and redirect to React app (port 3000)
     const encoded = encodeURIComponent(JSON.stringify(tokens));
-    return res.redirect(`http://localhost:3000/?googleToken=${encoded}`);
+    return res.redirect(`https://craftystepapp.up.railway.app/?googleToken=${encoded}`);
   } catch (err) {
     console.error('Error exchanging code:', err);
     return res.status(500).send('Error exchanging code');
